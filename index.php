@@ -13,9 +13,9 @@
 
     // send to all su scribed users
     echo($Onesignal->sendPushToAllSubscribedUsers([
-            "title" => "Boss I am Rezwan ",
-            "body" => "How was going your work? :') , i setup completed this.",
-            "url" => "https://www.google.com/"
+            "title" => "New messages",
+            "body" => "Please check your new message",
+            "url" => "https://www.rightbiz.co.uk/member_secure/my_msg/messages.php"
         ]));
 
     // send to specfic users

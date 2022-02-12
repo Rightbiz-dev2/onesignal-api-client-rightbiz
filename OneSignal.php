@@ -47,7 +47,10 @@ class OneSignal
                     "launch_url" => $data["url"]
                 ),
                 'contents' => $content,
-                'headings' => $heading
+                'headings' => $heading,
+                "small_icon" => "ic_stat_onesignal_default",
+                "android_accent_color" => "2464b3",
+                "android_led_color" => "2464b3"
                 
             );
             
@@ -80,7 +83,10 @@ class OneSignal
                     "launch_url" => $data['url']
                 ),
                 'contents' => $content,
-                'headings' => $heading
+                'headings' => $heading,
+                "small_icon" => "ic_stat_onesignal_default",
+                "android_accent_color" => "2464b3",
+                "android_led_color" => "2464b3"
             );
             
             $fields = json_encode($fields);
