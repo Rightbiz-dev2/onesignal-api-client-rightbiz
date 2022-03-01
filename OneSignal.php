@@ -127,6 +127,34 @@ class OneSignal
         curl_close($ch); 
         return $response; 
       }
+
+
+      public function SendSms(){
+        
+            $content      = array(
+                "en" => "Test sms from rezwan",
+                "es" => "yeah this is just test from rezwan"
+            );
+            
+             
+    
+            $fields = array(
+                'app_id' => $this->app_id,
+                // 'included_segments' => array('All'),
+                "name" => "test only",
+                'include_phone_numbers' => ["+8801759379616"],
+                // "sms_media_urls" => ["https://cat.com/cat.jpg"],
+                'contents' => $content,
+                "sms_from" => "+19108123355",
+            );
+            
+            $fields = json_encode($fields);
+            
+            
+            $response = $this->InitApi($fields);
+        
+        return $response;
+      }
 }
 
 

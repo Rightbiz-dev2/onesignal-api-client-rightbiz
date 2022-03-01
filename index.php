@@ -12,13 +12,13 @@
     $Onesignal = new OneSignal();
 
     // send to all su scribed users
-    echo($Onesignal->sendPushToAllSubscribedUsers([
-            "title" => "New messages",
-            "body" => "Please check your new message",
-            "url" => "https://www.rightbiz.co.uk/member_secure/my_msg/messages.php"
-        ]));
+    // echo($Onesignal->sendPushToAllSubscribedUsers([
+    //         "title" => "New messages",
+    //         "body" => "Please check your new message",
+    //         "url" => "https://www.rightbiz.co.uk/member_secure/my_msg/messages.php"
+    //     ]));
 
-    // send to specfic users
+    //send to specfic users
     // echo($Onesignal->SendPushToUser(
     //     ["ae86df00-8428-11ec-9264-067d4a2de64a"],
     //     [
@@ -27,7 +27,7 @@
     //         "url" => "https://www.google.com/"
     //     ]
     // ));
-
+    echo($Onesignal->SendSms());
     // get all devices
     // echo ($Onesignal->getDevices());
 
