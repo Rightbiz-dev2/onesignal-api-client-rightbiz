@@ -49,10 +49,12 @@ class OneSignal
                 'contents' => $content,
                 'headings' => $heading,
                 "small_icon" => "ic_stat_onesignal_default",
+                "big_picture" => isset($data['big_picture']) ? $data["big_picture"] : "",
                 "android_accent_color" => "2464b3",
                 "android_led_color" => "2464b3"
                 
             );
+            
             
             $fields = json_encode($fields);
             
@@ -85,6 +87,7 @@ class OneSignal
                 'contents' => $content,
                 'headings' => $heading,
                 "small_icon" => "ic_stat_onesignal_default",
+                "big_picture" => isset($data['big_picture']) ? $data["big_picture"] : "",
                 "android_accent_color" => "2464b3",
                 "android_led_color" => "2464b3"
             );
@@ -128,33 +131,6 @@ class OneSignal
         return $response; 
       }
 
-
-      public function SendSms(){
-        
-            $content      = array(
-                "en" => "Test sms from rezwan",
-                "es" => "yeah this is just test from rezwan"
-            );
-            
-             
-    
-            $fields = array(
-                'app_id' => $this->app_id,
-                // 'included_segments' => array('All'),
-                "name" => "test only",
-                'include_phone_numbers' => ["+8801759379616"],
-                // "sms_media_urls" => ["https://cat.com/cat.jpg"],
-                'contents' => $content,
-                "sms_from" => "+19108123355",
-            );
-            
-            $fields = json_encode($fields);
-            
-            
-            $response = $this->InitApi($fields);
-        
-        return $response;
-      }
 }
 
 
